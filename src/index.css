@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.title{
+  font-size: 21px;
+  color: rgb(206, 15, 15);
+}
+
+.model{
+  background:#171818c9;
+  width: 100vw;
+  overflow: visible;
+ 
+}
+canvas{
+  min-height: 1000px;
+}
+.homepage{
+  background-color:#010203;
+}

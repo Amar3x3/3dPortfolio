@@ -1,21 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 *{
   margin: 0;
   padding: 0;
 }
 .title{
-  font-size: 21px;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 71px;
   color: rgb(206, 15, 15);
+  letter-spacing: 1px;
 }
 
+.text {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 41px;
+  color: white;
+}
+
+
 .model{
-  background:#171818c9;
-  width: 100vw;
+  /* background:#171818c9; */
+  background: rgb(239,239,242);
+background: radial-gradient(circle, rgba(239,239,242,1) 16%, rgba(224,224,231,1) 24%, rgba(145,145,148,1) 52%, rgba(43,43,43,1) 100%); 
+ 
+background: rgb(167,95,169);
+background: linear-gradient(125deg, rgba(167,95,169,1) 0%, rgba(130,78,160,1) 26%, rgba(57,45,143,1) 69%, rgba(5,22,131,1) 100%); 
+
+background: rgb(115,95,169);
+background: linear-gradient(125deg, rgba(115,95,169,1) 0%, rgba(160,85,78,1) 26%, rgba(135,143,45,1) 69%, rgba(5,22,131,1) 100%); 
+
+background:#050505f5;
+width: 100vw;
   overflow: visible;
  
 }
+.intro{
+  color: white;
+  width: 700px;
+}
+
 canvas{
-  min-height: 1000px;
+  min-height: 100vh;
+}
+.projects{
+  width: 800px;
+}
+.flex-space-betwn{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
 }
 .homepage{
   background-color:#010203;
 }
+.achievement{
+  width:800px;
+ }
+ .live-btn{
+  padding: 0.2rem 1.9rem;
+  background-color: white;
+  color: black;
+  margin: 0.3rem;
+  cursor: pointer;
+ }
+ .center{
+  position: absolute;
+  top: 20%;
+  left: -20rem;
+  z-index: 1;
+ }
+ @media(max-width:800px){
+   .title{
+     font-size: 31px;
+   }
+   .text{
+     font-size: 21px;
+   }
+   .intro{
+    width: 310px;
+   }
+   .center{
+    left: -8rem;
+   }
+ }

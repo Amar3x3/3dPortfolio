@@ -7,6 +7,7 @@ import Halo from "../models/Halo";
 import Projects from "./Projects";
 import Achivements from "./Achivements";
 import Experience from "./Experience";
+import Spaceship from "../models/Spaceship";
 
 // StarField component
 const StarField = () => {
@@ -34,6 +35,20 @@ const StarField = () => {
 };
 
 const Scene = ({ section, cameraRef }) => {
+  const spaceShipPosition = ()=>{
+    console.log(section);
+    let sp1 = -1100; let sp2 = -13.9; let sp3 = -1100; let r2 = 1.4;
+    if(section === 1){
+      console.log("try "+section);
+        sp1 = -40; sp2 = -13.9; sp3= -1100; 
+    }
+    if(section === 3 || section === 4){
+        sp1 = -500;  
+        r2 = 0.7
+    }
+    return {sp1, sp2, sp3, r2}
+  }
+  const{sp1, sp2, sp3, r2} = spaceShipPosition();
   const scaleModel = ()=>{
     let hd1 = 0; let ht1 = 1; let b1 = 1; let s1 = -1; let l1 = -1;        let og1 = 0;
     let hd2 =1.7; let ht2 = 1.5; let b2 = 0.5; let s2 = 0.5; let l2 = 1.5; let og2 = -1.3;
@@ -71,6 +86,7 @@ const Scene = ({ section, cameraRef }) => {
     { position: [l1, l2, l3], name: "legs" }, // Legs
   ];
   
+  
 
   // Update the camera position in the animation loop
   useFrame(() => {
@@ -97,6 +113,9 @@ const Scene = ({ section, cameraRef }) => {
         {/* 3D Model */}
         {/* <Driod_light position={[first, second, third]} scale={[1, 1, 1]} rotation={[0, 0, 0]} /> */}
         <Halo position={[og1, og2, og3]} scale={[1, 1, 1]} rotation={[0, 0, 0]}/>
+        
+        <Spaceship position={[sp1, sp2, sp3]} rotation={[0, r2 ,0.7]}/>
+        
         {/* Display different text based on the section */}
         {section === 0 && (
           <Html position={[hed1, hed2, hed3]}  color="white" anchorX="center" anchorY="middle">
